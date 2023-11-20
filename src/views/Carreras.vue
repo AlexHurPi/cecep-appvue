@@ -12,7 +12,7 @@
     </thead>
     <tbody>
         
-        <tr v-for="(carrera,index)in carreras" :key="index">
+        <tr v-for="(carrera,index) in carreras" :key="index">
             <th scope="row">{{ index + 1 }}</th>
             <td>{{ carrera.id }}</td>
             <td>{{ carrera.nombre }}</td>
@@ -36,7 +36,7 @@ export default {
    mounted() {
         axios
             .get('http://127.0.0.1:8000/api/carreras')
-                 .then(response =>(this.carreras=response.data.carreras))
+                 .then(response =>(this.carreras = response.data.carreras))
                         
             },
     }
